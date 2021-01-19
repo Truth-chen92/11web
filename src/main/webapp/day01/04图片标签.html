@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-
+<!--src路径：
+    相对路径：访问站内资源时使用
+        1.图片和页面在同一目录：直接写图片名
+        2.图片在页面的上级目录：../图片名
+        3.图片在页面的下级目录：文件夹名/图片名
+    绝对路径：一般访问站外资源时使用
+        这种就叫做图片盗链，好处是节省本站资源，但是存在找不到图片的风险
+-->
+<img src="1.jpeg" alt="">
+<img src="../2.jpeg" alt="">
+<img src="abc/6.jpeg" alt="">
+<img src="http://cdn.tmooc.cn/bsfile//courseImg///280c6025caa14649ba86b3561db92066.jpg" alt="">
 </body>
 </html>
