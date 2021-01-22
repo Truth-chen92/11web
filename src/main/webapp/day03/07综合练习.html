@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*设置全局的字体效果
+        因为页面中所有的元素都是body里面的后代元素，所以给body设置样式
+        相当于给整个页面设置样式*/
+        body{
+            font: 12px "simhei", Arial, Helvetica, sans-serif;
+            color: #666;
+        }
+        body>div{
+            width: 375px;
+            height: 376px;
+            background-color: #e8e8e8;
+            background-image: url("http://doc.canglaoshi.org/tstore_v1/images/itemCat/study_computer_img2.png");
+            background-repeat: no-repeat;
+            background-size: 292px 232px;
+            background-position: 80% 90%;
+        }
+        .p1{
+            color: #333333;
+            font-size: 32px;
+            margin-bottom: 12px;
+            font-weight: lighter;
+        }
+        .p2{
+            margin-bottom: 24px;
+            font-size: 12px;
+            font-weight: lighter;
+        }
+        .p3{
+            margin-bottom: 12px;
+            font-weight: bold;
+            color: #0AA1ED;
+            font-size: 24px;
+        }
+        a{
+            color: white;
+            background-color: #0aa1ed;
+            text-decoration: none;
+            display: inline-block;
+            width: 132px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;/*纵向居中*/
+            border-radius: 2px;
+        }
+        div>div{
+            width: 253px;
+            height: 232px;
+            padding: 4px;
+            text-align: left;
+            margin-top: 39px;
+            margin-left: 25px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div>
+        <p class="p1">颜值 框不住</p>
+        <p class="p2">酷睿双核i5处理器|256GB SSD| 8GB内存</br>
+            英特尔HD显卡620含共享显卡内存
+        </p>
+        <p class="p3">￥6888.00</p>
+        <a href="http://doc.canglaoshi.org/tstore_v1/web/product_details.html">查看详情</a>
+    </div>
+</div>
+</body>
+</html>
