@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="i1" placeholder="数量">
+<input type="text" id="i2" placeholder="时间">
+<input type="button" value="开始添加" onclick="fn1()">
+<div id="d1"></div>
+<script>
+    function fn1() {
+        let a=0;
+        let time=setInterval(function () {
+            a++;
+            d1.innerHTML+="<img src='2.jpeg'>";
+            if(a==i1.value)
+                clearInterval(time)
+        },i2.value)
+    }
+
+</script>
+</body>
+</html>

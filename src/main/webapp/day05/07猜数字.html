@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="i1" placeholder="请输入1-100整数" >
+<input type="button" value="猜一猜" onclick="fn1()">
+<div id="d1"></div>
+<script>
+    let x=parseInt(Math.random()*100)+1;
+    let a=0;
+    function fn1() {
+        a++;
+        let d=document.getElementById("d1");
+        let i=document.getElementById("i1");
+        if(isNaN(i.value)){
+            d.innerText="瞎输什么玩意儿";
+        }else if(i.value>x){
+            d.innerText="大了"
+        }else if(i.value<x){
+            d.innerText="小了"
+        }else{
+            d.innerText="对了"+a+"次";
+        }
+    }
+</script>
+</body>
+</html>

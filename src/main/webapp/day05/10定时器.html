@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 开启定时器
+    // 把方法作为参数传递时不需要括号
+    let time=setInterval(fn1,1000);
+    let i=0;
+    function fn1(){
+        console.log("hello"+i++)
+        if(i==10){
+            clearInterval(time);
+        }
+    }
+    // 第二种开启定时器的方式
+    setInterval(function () {
+        console.log("我是第二种")
+    },1000)
+</script>
+</body>
+</html>

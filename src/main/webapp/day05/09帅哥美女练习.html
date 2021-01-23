@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="帅哥" onclick="fn1(1)">
+<input type="button" value="美女" onclick="fn1(2)">
+<div id="d1"></div>
+<script>
+
+    function fn1(x) {
+        let imgName= x==1?"1.jpeg":"2.jpeg";
+        d1.innerHTML+="<img src='"+imgName+"'>";
+    }
+</script>
+</body>
+</html>

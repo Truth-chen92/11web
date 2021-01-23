@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="i1">
+<input type="button" value="平方" onclick="fn1()">
+<div id="d1"></div>
+<script>
+    function fn1() {
+        let d=document.getElementById("d1");
+        let i=document.getElementById("i1");
+        if(isNaN(i.value)){
+            d.innerText="输入格式错误";
+        }else{
+            // 字符串类型进行-*/会自动转换为数值，加法运算时是字符串拼接
+            d.innerText=i.value*i.value;
+        }
+
+    }
+</script>
+</body>
+</html>
