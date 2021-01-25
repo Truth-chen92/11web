@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="i1">
+<input type="button" value="按钮" id="btn">
+<div id="d1"></div>
+<!--引入jQuery框架-->
+<script src="../js/jquery-1.4.2.js"></script>
+<!--script标签只能实现一种功能 要么引入文件 要么执行代码 不能既引入又执行-->
+<script>
+    $("#btn").click(function () {
+        // alert("按钮被点击了！")
+        // 取出文本框的值
+        let info = $("#i1").val();
+        // 把文本框的值赋给div
+        $("#d1").text(info);
+    })
+
+
+</script>
+
+
+</body>
+</html>

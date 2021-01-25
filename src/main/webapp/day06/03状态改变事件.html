@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        onload=function (){
+            d1.innerText="内容被修改了~";
+        }
+        // 页面加载完成事件 如果script标签写在元素下面 则不需要此事件
+    </script>
+</head>
+<body>
+
+<div id="d1">这是div</div>
+<!--onchange 值改变事件 当下拉选的值发生改变时触发-->
+<select  id="s1" onchange="changefn()">
+    <option>北京</option>
+    <option>上海</option>
+    <option>广州</option>
+</select>
+<input type="text" onblur="blurfn()" id="i1"><span id="myspan"></span>
+<script>
+    function changefn() {
+        alert(s1.value);
+    }
+    function blurfn() {
+        if(i1.value=="tom"){
+            myspan.innerText="用户名已存在";
+        }else{
+            myspan.innerTex="用户名可用";
+        }
+    }
+</script>
+
+</body>
+</html>

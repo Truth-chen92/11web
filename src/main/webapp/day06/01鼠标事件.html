@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px; height: 200px;background: red;
+        }
+    </style>
+</head>
+<body>
+
+<div onmouseover="overfn()" onmouseout="outfn()" onmousedown="downfn()" onmouseup="upfn()" onmousemove="movefn()" onmouseenter="overfn()" onmouseleave="outfn()"></div>
+<script>
+    function overfn(){
+        console.log("鼠标进来啦~")
+    }
+    function outfn() {
+        console.log("鼠标出去啦~")
+    }
+    function downfn() {
+        console.log("鼠标点下去啦~")
+    }
+    function upfn() {
+        console.log("鼠标松开啦~")
+    }
+    function movefn() {
+        console.log("鼠标动起来啦~")
+    }
+</script>
+
+
+</body>
+</html>
