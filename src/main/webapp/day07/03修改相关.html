@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+<input type="checkbox">
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    // 修改元素的文本内容 等效innertext
+    $("div:eq(0)").text("文本修改了");
+    // 修改元素的html内容 等效innerHTML
+    $("div:eq(1)").html("<h1>标签内容修改了</h1>");
+    // 获取和修改元素的css样式
+    $("div:eq(0)").css("color","red");
+    // 如果只传递一个参数，则为获取样式值
+    // alert($("div:eq(0)").css("color"));
+    // 批量赋值
+    $("div:last").css({"color":"red","background-color":"blue"})
+    // 获取和修改元素的属性 attr=attribute
+    // $("input").attr("checked","checked")
+    $("input").attr("checked",true)
+    // 获取
+    alert($("input").attr("checked"))
+
+</script>
+
+
+
+
+</body>
+</html>

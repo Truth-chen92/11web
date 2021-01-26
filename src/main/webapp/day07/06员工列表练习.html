@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="员工姓名">
+<input type="text" placeholder="工作">
+<input type="text" placeholder="工资">
+<input type="button" value="添加">
+<table border="4">
+    <tr>
+        <th>姓名</th>
+        <th>工资</th>
+        <th>工作</th>
+        <th>操作</th>
+    </tr>
+</table>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    // 给按钮添加点击事件
+    $("input:last").click(function () {
+        // 创建tr
+        let tr=$("<tr></tr>")
+        // 创建4个td
+        let nametd=$("<td></td>")
+        let salarytd=$("<td></td>")
+        let jobtd=$("<td></td>")
+        let deltd=$("<td><input type='button'value='删除'></td>")
+        // 给deltd删除按钮添加点击事件
+        deltd.children().click(function () {
+            tr.remove()
+        })
+        // 给td设置用户输入的内容
+        nametd.text($("input:eq(0)").val());
+        salarytd.text($("input:eq(1)").val());
+        jobtd.text($("input:eq(2)").val());
+        // 把td装进tr
+        tr.append(nametd);
+        tr.append(salarytd);
+        tr.append(jobtd);
+        tr.append(deltd);
+        // 把tr装进table
+        $("table").append(tr);
+    })
+
+</script>
+</body>
+</html>

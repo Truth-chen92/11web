@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>同事
+        <ul>
+            <li>马云</li><li>马化腾</li><li>任正非</li>
+        </ul>
+    </li>
+    <li>亲戚
+        <ul>
+            <li>老干爹</li><li>老干妈</li><li>老干妹</li>
+        </ul>
+    </li>
+    <li>前女友们
+        <ul>
+            <li>貂蝉</li><li>西施</li><li>潘金莲</li>
+        </ul>
+    </li>
+</ul>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    // 得到第二层的ul让其隐藏
+    $("li>ul").hide();
+    // 给第一层的所有li添加点击事件
+    $("body>ul>li").click(function () {
+        // 在动态绑定的时间方法中 this代表事件源
+        // 所有this都是js对象 所以调用jq方法时一定要先转成jq对象再调用
+        $(this).children().toggle();
+        // 得到点击的li以外的其他两个Li 并让其隐藏
+        $(this).siblings().children().hide();
+    })
+
+
+
+
+
+</script>
+</body>
+</html>

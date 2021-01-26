@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select>
+    <option>请选择</option>
+    <option value="0">河北省</option>
+    <option value="1">山东省</option>
+    <option value="2">北京</option>
+</select>
+<select>
+    <option>请选择</option>
+</select>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    let arr=[["唐山","秦皇岛","石家庄"],["青岛","烟台","菏泽"],["朝阳","海淀","大兴"]]
+    // 给第一个下拉选添加值改变事件
+    $("select:first").change(function () {
+        // 每次选择新的省份把之前存在的4个覆盖成1个
+        $("select:last").html("<option>请选择</option>");
+        let city=arr[this.value];
+        for(let i=0;i<city.length;i++){
+            // 创建对象
+            let o=$("<option></option>");
+            // 放进对象里
+            o.text(city[i]);
+            // 放进第二个下拉选
+            $("select:last").append(o);
+
+        }
+
+
+    })
+
+
+</script>
+</body>
+</html>

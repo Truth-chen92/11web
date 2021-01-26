@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>我是h2</h2>
+<h3>我是h3</h3>
+<h4>我是h4</h4>
+<input type="button" value="添加">
+<input type="button" value="插入">
+<input type="button" value="删除">
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    $("input:last").click(function () {
+        $("h2").remove();
+    })
+    $("input:eq(1)").click(function () {
+        let h1=$("<h1>我是插入进来的</h1>");
+        // $("h3").before(h1);//前
+        $("h3").after(h1);//后
+    })
+    // 给第一个按钮添加点击事件
+    $("input:first").click(function () {
+        // 创建元素对象
+        let p=$("<p>我是新来的</p>")
+        // $("body").append(p);//把新元素添加到最后面
+        $("body").prepend(p);//前
+    })
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
