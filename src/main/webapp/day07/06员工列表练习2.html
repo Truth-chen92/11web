@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="员工姓名">
+<input type="text" placeholder="工作">
+<input type="text" placeholder="工资">
+<input type="button" value="添加">
+<table border="4">
+    <th>姓名</th>
+    <th>工资</th>
+    <th>工作</th>
+    <th>操作</th>
+</table>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    $("input:last").click(function () {
+        let tr=$("<tr></tr>")
+        let nametd=$("<td></td>")
+        let salarytd=$("<td></td>")
+        let jobtd=$("<td></td>")
+        let deltd=$("<td><input type='button' value='删除'></td>")
+        nametd.text($("input:eq(0)").val());
+        salarytd.text($("input:eq(1)").val());
+        jobtd.text($("input:eq(2)").val());
+        deltd.children().click(function () {
+            tr.remove();
+        })
+        tr.append(nametd);
+        tr.append(salarytd);
+        tr.append(jobtd);
+        tr.append(deltd);
+        $("table").append(tr);
+    });
+
+
+</script>
+
+
+
+</body>
+</html>

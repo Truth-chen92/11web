@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>购物车</h3>
+<input type="checkbox" value="2500">苹果手机2500元<br>
+<input type="checkbox" value="1500">锤子手机1500元<br>
+<input type="checkbox" value="500">老人机500元<br>
+<input type="checkbox" value="250">傻子机250元<br>
+<input type="checkbox" id="all">全选
+<p>总价:0元</p>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    $("input").click(function () {
+        if(this.id=="all"){
+            let status=$(this).attr("checked");
+            $("input:not('#all')").attr("checked",status)
+        }
+        let count=0;
+        let total=0;
+        $("input:not('#all')").each(function () {
+            if($(this).attr("checked")){
+                count++;
+                total+=parseInt($(this).val());
+            }
+        })
+        $("#all").attr("checked",count==4)
+        $("p").text("总价:"+total+"元")
+    })
+
+
+</script>
+</body>
+</html>

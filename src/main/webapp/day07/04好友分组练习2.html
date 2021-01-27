@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>同事
+        <ul>
+            <li>1号</li>
+            <li>2号</li>
+            <li>3号</li>
+        </ul>
+    </li>
+    <li>亲戚
+        <ul>
+            <li>大号</li>
+            <li>中号</li>
+            <li>小号</li>
+        </ul>
+    </li>
+    <li>朋友
+        <ul>
+            <li>AA</li>
+            <li>BB</li>
+            <li>CC</li>
+        </ul>
+    </li>
+</ul>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    $("li>ul").hide();
+    $("body>ul>li").click(function () {
+        $(this).children().toggle();
+        $(this).siblings().children().hide();
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Template</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <style>
+        div>div{border: 4px solid red}
+    </style>
+</head>
+<body>
+<!--使用栅格系统需要先创建一个表示行的div-->
+<div class="row">
+    <div class="col-md-6">占6</div>
+    <div class="col-md-6">占6</div>
+</div>
+<div class="row">
+    <div class="col-md-4">占4</div>
+    <div class="col-md-4">占4</div>
+    <div class="col-md-4">占4</div>
+</div>
+<div class="row">
+    <div class="col-md-1">占1</div>
+    <div class="col-md-2">占2</div>
+    <div class="col-md-3">占3</div>
+    <div class="col-md-4">占4</div>
+    <div class="col-md-2">占2</div>
+</div>
+<!--居中 container-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">占6</div>
+        <div class="col-md-6">占6</div>
+    </div>
+</div>
+<!--1.创建一行划分3部分 2:4:6-->
+<!--1.创建一行划分3部分 1:2:1-->
+<!--1.创建一行划分3部分 3:2:2:3:2-->
+<div class="row">
+    <div class="col-md-2">占2</div>
+    <div class="col-md-4">占4</div>
+    <div class="col-md-6">占6</div>
+</div>
+<div class="row">
+    <div class="col-md-3">占3</div>
+    <div class="col-md-6">占6</div>
+    <div class="col-md-3">占3</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">占3</div>
+        <div class="col-md-2">占2</div>
+        <div class="col-md-2">占2</div>
+        <div class="col-md-3">占3</div>
+        <div class="col-md-2">占2</div>
+    </div>
+</div>
+<!--列偏移:如果一行列数不足12时有可能使用-->
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">占8</div>
+</div>
+<!--响应式栅格系统-->
+<div class="row">
+<!--    lg-大显示器  md-桌面显示器  sm-平板  xs-手机-->
+    <div class="col-md-2 col-sm-3 col-xs-6">刘德华</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">刘德华</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">刘德华</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">刘德华</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">刘德华</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">刘德华</div>
+</div>
+<div class="row">
+    <div class="col-lg-2 col-md-3 col-sm-6"><img class="img-responsive img-rounded" src="../2.jpeg" alt=""></div>
+    <div class="col-lg-2 col-md-3 col-sm-6"><img class="img-responsive img-circle" src="../2.jpeg" alt=""></div>
+    <div class="col-lg-2 col-md-3 col-sm-6"><img class="img-responsive img-thumbnail" src="../2.jpeg" alt=""></div>
+    <div class="col-lg-2 col-md-3 col-sm-6"><img class="img-responsive" src="../2.jpeg" alt=""></div>
+    <div class="col-lg-2 col-md-3 col-sm-6"><img class="img-responsive" src="../2.jpeg" alt=""></div>
+    <div class="col-lg-2 col-md-3 col-sm-6"><img class="img-responsive" src="../2.jpeg" alt=""></div>
+</div>
+<!--缩略图组件-->
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="../1.jpeg" alt="">
+            <div class="caption">
+                <h3>一号姑娘</h3>
+                <p>美！</p>
+                <p><a href="#" class="btn btn-primary" role="button">点赞</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="../1.jpeg" alt="">
+            <div class="caption">
+                <h3>一号姑娘</h3>
+                <p>美！</p>
+                <p><a href="#" class="btn btn-primary" role="button">点赞</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="../1.jpeg" alt="">
+            <div class="caption">
+                <h3>一号姑娘</h3>
+                <p>美！</p>
+                <p><a href="#" class="btn btn-primary" role="button">点赞</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>
