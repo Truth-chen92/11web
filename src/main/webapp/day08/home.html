@@ -60,6 +60,13 @@
       border: none;
       color: black;
     }
+    .well{
+      background-color: black;
+      border: none;
+      color:#ffc600;
+      font-weight: bold;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -172,6 +179,36 @@
             <img class="img-responsive" src="7.jpeg" alt="">
           </a>
         </div>
+        <div class="grid-item">
+          <a href="">
+            <img class="img-responsive" src="8.jpeg" alt="">
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="">
+            <img class="img-responsive" src="9.jpeg" alt="">
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="">
+            <img class="img-responsive" src="10.jpg" alt="">
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="">
+            <img class="img-responsive" src="11.jpg" alt="">
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="">
+            <img class="img-responsive" src="12.jpeg" alt="">
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="">
+            <img class="img-responsive" src="13.jpeg" alt="">
+          </a>
+        </div>
       </div>
 <!--      瀑布流结束-->
     </div>
@@ -219,9 +256,58 @@
         </li>
       </ul>
 <!--      浏览最多结束-->
+<!--      最受欢迎开始-->
+<!--      列表组组件-->
+      <ul class="list-group">
+        <li class="list-group-item list-head">
+          <h4>
+            <span class="fa fa-thumbs-o-up">最受欢迎</span>
+          </h4>
+        </li>
+        <li class="list-group-item">
+          <div class="media">
+            <div class="media-left">
+              <img src="6.jpeg" class="media-object" style="width:60px">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="">作品标题</a></h4>
+              <p>作品的详细介绍</p>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="media">
+            <div class="media-left">
+              <img src="4.jpeg" class="media-object" style="width:60px">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="">作品标题</a></h4>
+              <p>作品的详细介绍</p>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="media">
+            <div class="media-left">
+              <img src="3.jpeg" class="media-object" style="width:60px">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="">作品标题</a></h4>
+              <p>作品的详细介绍</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+<!--      最受欢迎结束-->
     </div>
   </div>
 </section>
+<footer class="container">
+  <div class="well">
+    Copyright © 北京达内金桥科技有限公司版权所有 京ICP备12003709号-3
+    <span class="pull-right">Version 0.1.0</span>
+  </div>
+</footer>
 <!--主体区域结束-->
 </body>
 <script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
@@ -239,9 +325,12 @@
   // 瀑布流相关 初始化操作
   $(".grid").masonry({
     itemSelector:".grid-item",//告诉瀑布流框架如何选择到页面中的元素
-    columnWidth:210//告诉瀑布流框架每个元素所占狂赌为210（图片宽度+间距）
+    columnWidth:210//告诉瀑布流框架每个元素所占宽度为210（图片宽度+间距）
   })
-
+  //图片加载完之后让瀑布流框架更新一个布局操作
+  $(".grid").imagesLoaded().progress(function () {
+    $(".grid").masonry("layout");
+  })
 
 </script>
 </html>
